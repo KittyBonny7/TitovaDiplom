@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Общественные опросы</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Скрипт для плавной прокрутки страницы по нажатию кнопки -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() != 0) {
+            $("#toTop").fadeIn();
+          } else {
+            $("#toTop").fadeOut();
+          }
+        });
+
+        $("#toTop").click(function () {
+          $("body,html").animate({ scrollTop: 0 }, 800);
+        });
+      });
+    </script>
+</head>
+<body>
+    <!-- Меню -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="">Опросы</a>
+                    <ul>
+                        <li><a href="ecology.html">Экология</a></li>
+                        <li><a href="animals.html">Животные</a></li>
+                        <li><a href="family.html">Семья</a></li>
+                        <li><a href="policy.html">Политика</a></li>
+                    </ul>
+                </li>
+                <li><a href="publications.html">Публикации</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="information.html">Информация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основная информация сайта -->
+    <main style="width:60%; margin-left:auto; margin-right: auto;">
+        <div style="text-align: center;"><a><img class="main_png" src="./img/animals.png" alt="социальные опросы"></a></div>
+        <section>
+            <div></div>     
+        </section>
+
+        <!-- Пример опроса с тестом -->
+        <section>
+            <p>4*12 + 7 = <input type="text" id="z_1"></p>
+            <p>7-8*2 = <input type="text" id="z_2"></p>
+            <p>34*2 + 17 =  <input type="text" id="z_3"></p>
+            <button onclick="proverit();">Проверить</button><br>
+            <br><div id="rezultat"></div>
+        </section>
+
+        <!-- Пример формы 1 -->
+        <section>
+            <form>
+                Имя: <input type = "text" name = "firstname" value = "Введите Ваше имя"> <br>
+                Фамилия: <input type = "text" name = "lastname" value = "Введите Вашу фамилию"> <br>
+                Мужчина <input type = "radio" name = "sex" value = "male" checked>
+                Женщина <input type = "radio" name = "sex" value = "female"> <br>
+                Дата рождения <input type="date">
+                <input type = "submit" name = "submit" value = "Отправить">
+            </form>
+        </section>
+
+        <section>
+            <form action="my.php">
+
+                Выберете страны, в которых вы были: <br>
+                
+                <input type = "checkbox" name = "type1" value = "Turkey">Турция<br>
+                <input type = "checkbox" name = "type2" value = "Poland">Польша<br>
+                <input type = "checkbox" name = "type3" value = "USA">США<br>
+                <input type = "checkbox" name = "type4" value = "Egypt">Египет<br>
+                <input type = "checkbox" name = "type5" value = "Thailand">Таиланд<br>
+                <input type = "submit" name = "submit" value = "Ответить">
+            </form>
+        </section>
+    </main>
+    
+ <!-- Подвал -->
+ <footer>
+    <div class="foot">
+      <p>Горячая линия: 8 (953)-333-22-11</p>
+      <p>г. Калуга, ул. Маршала Жукова, д.35 ГБОУ КО "КТЭП"</p>
+    </div>
+  </footer>
+
+    <script src="./animals.js" defer></script>
+    <link rel="stylesheet" href="animals_data.js">
+</body>
+</html>

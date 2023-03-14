@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Изменение логотипа в браузере -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Название сайта -->
+    <title>Общественные опросы</title>
+    <!-- Подключение файлов -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Скрипт для плавной прокрутки страницы по нажатию кнопки -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $(window).scroll(function () {
+          if ($(this).scrollTop() != 0) {
+            $("#toTop").fadeIn();
+          } else {
+            $("#toTop").fadeOut();
+          }
+        });
+
+        $("#toTop").click(function () {
+          $("body,html").animate({ scrollTop: 0 }, 800);
+        });
+      });
+    </script>
+</head>
+<body>
+    <!-- Меню -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="">Опросы</a>
+                    <ul>
+                        <li><a href="ecology.html">Экология</a></li>
+                        <li><a href="animals.html">Животные</a></li>
+                        <li><a href="family.html">Семья</a></li>
+                        <li><a href="policy.html">Политика</a></li>
+                    </ul>
+                </li>
+                <li><a href="publications.html">Публикации</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="information.html">Информация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основная информация сайта -->
+    <main style="width:60%; margin-left:auto; margin-right: auto;">
+        <div style="text-align: center;"><a><img class="main_png" src="./img/ecology.png" alt="социальные опросы"></a></div>
+        <section>
+            <div></div>     
+        </section>
+    </main>
+
+ <!-- Подвал -->
+ <footer>
+  <div class="foot">
+    <p>Горячая линия: 8 (953)-333-22-11</p>
+    <p>г. Калуга, ул. Маршала Жукова, д.35 ГБОУ КО "КТЭП"</p>
+  </div>
+</footer>
+
+</body>
+</html>
